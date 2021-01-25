@@ -57,17 +57,17 @@ int main()
 	//{ 
 	//cout<<ref[i]<<"\n";
 	//}
-	cout<<"Checking the ref id\n";
-	cout<<"Enter the number of alphabet to print:";
-	cin>>id;
-	if (id<26)
-	{
-		cout<<"the alphabet with id"<<id<<"="<<ref[id-1]<<"\n"; //array starts from 0
+	//cout<<"Checking the ref id\n";
+	//cout<<"Enter the number of alphabet to print:";
+	//cin>>id;
+	//if (id<26)
+	//{
+	//	cout<<"the alphabet with id"<<id<<"="<<ref[id-1]<<"\n"; //array starts from 0
 		
-	} else
-	{
-			cout<<"Out of range!!!/n";
-	}
+	//} else
+	//{
+	//		cout<<"Out of range!!!/n";
+	//}
 	cout<<"printing reverse order\n";
 	for(i=n;i>=0;i--)
 	{
@@ -91,10 +91,18 @@ int main()
         cout<<"your randomly generated code is:"<<rv<<"\n";
     }
     
-	for(i=n-1;i>=0;i--)
+	for(i=n-1;i>=0;i--)								//addition of random variable with the ascii value							
 	{
-		cout<<int(a[i]+rv)<<"\t";					//addition of random variable with the ascii value
+		if(i!=0)									//condition to print "." for the last element.
+		{
+		cout<<int(a[i]+rv)<<",";
+		}
+		else{
+		cout<<int(a[i]+rv)<<".";					
+		}
+					
 	}
+	
 	
 	
 	
