@@ -6,15 +6,15 @@ using namespace std;
 char ref[26] = {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'};
 int main()
 {
-	int i,n,k,e;									//use id as a variable to check referance array
+	int i,n,k,e;									 //use id as a variable to check referance array
 	int rv;
 	char a[100];
 	char s[100];
 	srand(time(0));
 	cout<<"enter your code:";
 	cin.getline( s,99);
-	n = strlen(s);								//strlen to remove "enter your limit"
-	cout<<"\nthe word is:"<<s<<"\n";			//implementation of string function as a method to reduce complexity
+	n = strlen(s);								        //strlen to remove "enter your limit"
+	cout<<"\nthe word is:"<<s<<"\n";						//implementation of string function as a method to reduce complexity
 												 
 	for(i=0;i<n;i++)
 	{
@@ -26,23 +26,23 @@ int main()
 		{
 			cout<<a[i]<<"\t";
 		}
-	cout<<"\nTotal number of elements:"<<n;		//strlen to be implemented;
+	cout<<"\nTotal number of elements:"<<n;						//strlen to be implemented;
 	
 	cout<<"\nTo print the middle element\n";
 	k=n/2;
 	if (n%2==1)
 	{
-		cout<<"\tThis is n:"<<n<<"\n";				//strlen to be implemented;
+		cout<<"\tThis is n:"<<n<<"\n";						//strlen to be implemented;
 		cout<<"\tThis is k:"<<k;
 		
 		cout<<"\n"<<"This is the middle element:"<<a[k]<<"\n";
 		cout<<"ascii value of middle element is:"<<int(a[k])<<"\n";
 	} else 
 	{
-		 cout<<"Element is even!!!\n";    //splitting an even array requires innovation
+		 cout<<"Element is even!!!\n";						 //splitting an even array requires innovation
 		 cout<<"Splitting the array....."<<"\n";
 		 e=k-1;
-		cout<<"\nPrinting respective element:"<<a[k-1];  //array starts from 0
+		cout<<"\nPrinting respective element:"<<a[k-1]; 			 //array starts from 0
 		cout<<"\nPrinting the first half\n";
 		for(i=0;i<=e;i++)
 		 {
@@ -65,7 +65,7 @@ int main()
 	//cin>>id;
 	//if (id<26)
 	//{
-	//	cout<<"the alphabet with id"<<id<<"="<<ref[id-1]<<"\n"; //array starts from 0
+	//	cout<<"the alphabet with id"<<id<<"="<<ref[id-1]<<"\n";		        //array starts from 0
 		
 	//} else
 	//{
@@ -87,7 +87,7 @@ int main()
 		cout<<int(a[i-1])<<"\t";
 	}
 	cout<<"\nBegining of simple encryption\n";
-	for(int x = 1; x<2;x++)							//to create a computer generated random variable ie,"rv"
+	for(int x = 1; x<2;x++)								//to create a computer generated random variable ie,"rv"
     {
 		
         rv = 1+ (rand()%7);
@@ -99,7 +99,7 @@ int main()
 	cout<<"Your Encrypted Code Is\n";
 	for(i=n-1;i>=0;i--)								//addition of random variable with the ascii value							
 	{
-		if(i!=0)									//condition to print "." for the last element.
+		if(i!=0)								//condition to print "." for the last element.
 		{
 		cout<<int(a[i]+rv)<<",";
 		}
